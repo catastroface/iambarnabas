@@ -9,6 +9,7 @@
 
   /* theme color */
   --hue-color: 250;
+  /* --hue-color: 155; */
 
   --main-color: hsl(var(--hue-color), 69%, 61%);
   --main-color-second: hsl(var(--hue-color), 69%, 61%);
