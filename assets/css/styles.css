@@ -1,4 +1,4 @@
-/* FONTS */
+/* FONTS import */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /* VARIABLES */
@@ -7,7 +7,7 @@
 
   /* Colors */
 
-  /* Theme color */
+  /* theme color */
   --hue-color: 250;
 
   --main-color: hsl(var(--hue-color), 69%, 61%);
@@ -20,4 +20,21 @@
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
+
+  /* Typography */
+  --body-font: "Poppins", sans-serif;
+
+  /* size */
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* weight */
+  --font-medium: 500;
+  --font-semi-bold: 600;
 }
