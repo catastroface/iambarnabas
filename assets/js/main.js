@@ -66,3 +66,29 @@ tabs.forEach((tab) => {
     tab.classList.add("qualification__active");
   });
 });
+
+//Services modal control
+const modalViews = document.querySelectorAll(".services__modal"),
+  modalBtns = document.querySelectorAll(".services__button"),
+  modalCloseBtns = document.querySelectorAll(".services__modal-close"),
+  graySpace = document.querySelector(".services__modal");
+
+const modalOpen = (modalClick) => {
+  modalViews[modalClick].classList.add("active-modal");
+};
+
+const modalClose = (modalClick) => {
+  modalViews[modalClick].classList.remove("active-modal");
+};
+
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener("click", () => {
+    modalOpen(i);
+  });
+});
+
+modalCloseBtns.forEach((modalCloseBtn, j) => {
+  modalCloseBtn.addEventListener("click", () => {
+    modalClose(j);
+  });
+});

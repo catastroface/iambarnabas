@@ -669,3 +669,9 @@ img {
   color: var(--main-color);
   margin-right: var(--mb-0-25);
 }
+
+/* Modal toggle */
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
