@@ -548,3 +548,17 @@ img {
   background-color: var(--main-color);
   transform: translate(6px, -7px);
 }
+
+/* Switching tabs */
+
+.qualification [data-content] {
+  display: none;
+}
+
+.qualification__active[data-content] {
+  display: block;
+}
+
+.qualification__button.qualification__active {
+  color: var(--main-color);
+}
