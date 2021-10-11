@@ -90,7 +90,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--text-color);
+  color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
 
@@ -159,8 +159,8 @@ img {
 
 .nav__logo,
 .nav__toggle {
-  color: var(--title-color);
   font-weight: var(--font-medium);
+  color: var(--title-color);
 }
 
 .nav__toggle {
@@ -267,7 +267,6 @@ img {
 
 .home__title {
   font-size: var(--big-font-size);
-  color: var(--title-color);
 }
 
 .home__subtitle {
