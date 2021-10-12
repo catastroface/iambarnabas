@@ -23,14 +23,14 @@ document.querySelectorAll(".nav__link").forEach((menuItem) =>
   })
 );
 
-//TOGGLE SKILLS
+//Toggle skills
 const skillsContent = document.getElementsByClassName("skills__content"),
   skillsHeader = document.querySelectorAll(".skills__header");
 
 function toggleSkills() {
   let itemClass = this.parentNode.className;
 
-  //Autohide all other lists. Remove to keep them opened.
+  //Autohide all other lists. Remove from 34 to 36 to keep them opened.
   for (i = 0; i < skillsContent.length; i++) {
     skillsContent[i].className = "skills__content skills__close";
   }
@@ -91,4 +91,14 @@ modalCloseBtns.forEach((modalCloseBtn, j) => {
   modalCloseBtn.addEventListener("click", () => {
     modalClose(j);
   });
+});
+
+//Portfolio swiper
+let swiper = new Swiper(".portfolio__container", {
+  cssMode: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
