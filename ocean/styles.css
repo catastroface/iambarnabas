@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  user-select: none;
+}
+
+/* LOGO DISPLAY */
+.logo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.logo::before {
+  content: "";
+  background: url(/img/teamseas-logo.png);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-color: hsla(290, 30%, 65%, 0.9);
+  bottom: 0;
+  left: -50%;
+  border-radius: 35%;
+  animation: waves 6s ease-in-out alternate infinite;
+}
+
+@keyframes waves {
+  to {
+    transform: translateY(-50%) rotate(540deg);
+  }
+}
+
+/* DONATE */
+.donate {
+  position: absolute;
+  bottom: 42vh;
+  left: 25%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+}
+.money {
+  font-size: 6vmin;
+  color: white;
+  text-shadow: 0 0 5px hsl(0, 0%, 0%, 0.5);
+  margin: 0;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.money::before {
+  content: "Help #TeamSeas remove 30 million pounds of trash and watch the plastic disappear";
+  font-size: 4vmin;
+  text-align: center;
+  margin-bottom: 4vmin;
+  width: 80%;
+  opacity: 0.95;
+}
+.money::after {
+  content: "is still needed to reach their goal";
+  font-size: 2.5vmin;
+  text-align: center;
+  margin-top: 1vmin;
+  width: 100%;
+  opacity: 0.95;
+}
+
+.cta {
+  border-radius: 20px;
+  border: 1px solid #993168;
+  background: #993168;
+  background: linear-gradient(to left, #993199, #993168);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 80ms ease-in;
+  margin-top: 3vmin;
+  box-shadow: 0 0 5px hsl(0, 0%, 0%, 0.5);
+}
+
+.cta:hover {
+  border: 1px solid #b33a7a;
+  background: #b33a7a;
+  background: linear-gradient(to left, #b338b3, #b33a7a);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+.cta:focus {
+  outline: none;
+}
+
+/* TRASH */
+.trash-container {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  bottom: 0;
+  left: 0;
+}
+
+.trash {
+  position: absolute;
+  opacity: 0.65;
+  animation: bob 2s ease-in-out infinite alternate;
+}
+
+@keyframes bob {
+  from {
+    transform: rotate(var(--rotation)) translateY(1vh);
+  }
+
+  to {
+    transform: rotate(calc(var(--rotation) + 10deg)) translateY(0);
+  }
+}
