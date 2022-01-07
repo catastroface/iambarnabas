@@ -121,7 +121,7 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
   },
 });
 
-// Scroll Sections active link
+// Set active link based on scroll position
 const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
@@ -144,3 +144,11 @@ function scrollActive() {
   });
 }
 window.addEventListener("scroll", scrollActive);
+
+// Apply shadow to menu when scrolling down
+function scrollHeader() {
+  const nav = document.getElementById("header");
+  if (this.scrollY >= 80) nav.classList.add("scroll-header");
+  else nav.classList.remove("scroll-header");
+}
+window.addEventListener("scroll", scrollHeader);
