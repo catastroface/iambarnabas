@@ -400,7 +400,7 @@ img {
 
 /* ABOUT */
 .about__img {
-  /* width: 200px; */
+  object-fit: cover;
   border-radius: 0.5rem;
   justify-self: center;
   align-self: center;
@@ -1056,7 +1056,7 @@ img {
     order: 1;
     justify-self: center;
   }
-  
+
   .about__container,
   .skills__container,
   .portfolio__content,
