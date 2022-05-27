@@ -190,3 +190,34 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// Color theme
+const colorThemeBtns = document.querySelectorAll(".color-theme");
+
+const setColorTheme = (target, hue) => {
+  colorThemeBtns.forEach((btn) => {
+    btn.classList.remove("active-color");
+  });
+  document.querySelector(":root").style.setProperty("--hue-color", hue);
+  target.classList.add("active-color");
+};
+
+const setBtnColor = (target, hue) => {
+  target.style.border = `2px solid hsl(${hue}, 69%, 61%)`;
+  console.log(target, hue);
+};
+
+colorThemeBtns.forEach((btn) => {
+  let hue = 200;
+  if (btn.id == "blue-theme") {
+    setBtnColor(btn, hue);
+  } else if (btn.id == "green-theme") {
+    hue = 90;
+  } else {
+    hue = 340;
+  }
+  setBtnColor(btn, hue);
+  btn.addEventListener("click", () => {
+    setColorTheme(btn, hue);
+  });
+});
