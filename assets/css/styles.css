@@ -1262,4 +1262,8 @@ img {
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .footer__container {
+    align-items: baseline;
+  }
 }
